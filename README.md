@@ -40,7 +40,7 @@
 - Обработка текста: `nltk`, `razdel`, `pymorphy2`, `emoji`
 - Модели и метрики: `scikit-learn`
 
-Рекомендуемый набор пакетов (`requirements.txt`):
+Рекомендуемый набор пакетов:
 
 ```txt
 pandas
@@ -59,8 +59,6 @@ scikit-learn
 Установка:
 
 ```bash
-pip install -r requirements.txt
-# или
 pip install pandas numpy matplotlib seaborn requests vk-api nltk razdel pymorphy2 emoji scikit-learn
 ```
 
@@ -71,20 +69,7 @@ pip install pandas numpy matplotlib seaborn requests vk-api nltk razdel pymorphy
 ```text
 .
 ├── ВохминАЕ_Курсовая_АнализТекстов.ipynb   # основной Jupyter-ноутбук с кодом
-├── README.md                               # описание проекта (этот файл)
-└── .gitignore                              # настройки игнорируемых файлов
-```
-
-Файл с токеном VK (`vk_token.txt`) **не должен** попадать в репозиторий.
-Его нужно создать локально и добавить в `.gitignore`.
-
-Пример `.gitignore`:
-
-```gitignore
-vk_token.txt
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
+└── README.md                               # описание проекта (этот файл)
 ```
 
 ---
@@ -95,17 +80,6 @@ __pycache__/
 2. Получить `access_token` с правами чтения стен сообществ.
 3. В корне проекта создать файл `vk_token.txt` и записать туда токен **одной строкой**.
 4. Убедиться, что `vk_token.txt` добавлен в `.gitignore`.
-
-В ноутбуке токен подхватывается автоматически:
-
-```python
-TOKEN_FILE = "vk_token.txt"
-
-with open(TOKEN_FILE, "r") as f:
-    ACCESS_TOKEN = f.read().strip()
-```
-
----
 
 ## 5. Как запустить ноутбук
 
